@@ -91,7 +91,6 @@ The following table shows the permissions granted to the `GITHUB_TOKEN` by defau
 | id-token      | none        | none | none |
 | {% endif %} |
 | issues        | read/write  | none | read |
-| metadata      | read        | read | read |
 | packages      | read/write  | read | read |
 | pages         | read/write  | none | read |
 | pull-requests | read/write  | none | read |
@@ -123,7 +122,7 @@ For full details of the `permissions` key, see [AUTOTITLE](/actions/using-workfl
 > [!NOTE]
 > Organization{% ifversion not fpt %} and enterprise{% endif %} owners can prevent you from granting write access to the `GITHUB_TOKEN` at the repository level. For more information, see [AUTOTITLE](/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization){% ifversion not fpt %} and [AUTOTITLE](/admin/policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise#enforcing-a-policy-for-workflow-permissions-in-your-enterprise).{% else %}.{% endif %}
 >
-> When the `permissions` key is used, all unspecified permissions are set to no access, with the exception of the `metadata` scope, which always gets read access.
+> When the `permissions` key is used, all unspecified permissions are set to no access.
 
 #### How the permissions are calculated for a workflow job
 
